@@ -1,9 +1,27 @@
 <svg>
 
-  <use id="panorama-view" href="#panoramaview-item">
+  <defs>
+    <symbol id="feed_log_item">
+      <text class="line_text first_row">Time:</text>
+      <text x="17%" class="line_text first_row">00:00 pm</text>
+
+      <text x="50%" class="line_text first_row">Last Side:</text>
+      <text x="82%" class="line_text first_row">Left</text>
+
+
+      <text class="line_text second_row">L:</text>
+      <text x="7%" class="line_text second_row">0h 00min</text>
+
+      <text x="50%" class="line_text second_row">R:</text>
+      <text x="57%" class="line_text second_row">0h 00min</text>
+      <rect x="0" y="30" width="100%" height="1" fill="black"/>
+    </symbol>
+  </defs>
+
+  <use id="panorama-view" href="#panoramaview">
     <!-- 1st screen -->
     <use id="src1" href="#panoramaview-item">
-
+      <rect width="100%" height="100%" fill="black" />
       <!-- button upper right -->
       <use id="btn-tr" href="#combo-button-upper-right">
         <set href="combo-button-icon" attributeName="href" to="baby_bottle_btn.png"/>  
@@ -24,17 +42,65 @@
       </use>
 
       <!-- text -->
-      <text id="" y="30%" class="" fill="fb-aqua">Current Side:</text>
-      <text id="" x="63%" y="30%" class="" fill="fb-aqua">Left</text>
+      <text id="" y="30%" class="info" fill="fb-aqua">Current Side:</text>
+      <text id="" x="63%" y="30%" class="info" fill="fb-aqua">Left</text>
 
-      <text id="" y="50%" class="" fill="fb-aqua">Last Feed:</text>
-      <text x="50%" y="50%" fill="fb-aqua">5h 30m ago</text>
+      <text id="" y="50%" class="info" fill="fb-aqua">Last Feed:</text>
+      <text x="45%" y="50%" class="info" fill="fb-aqua">5h 30m ago</text>
 
-      <text id="" y="60%" fill="fb-aqua">Last Side: </text>
-      <text id="" x="50%" y="60%" fill="fb-aqua">Left</text>
+      <text id="" y="60%" class="info" fill="fb-aqua">Last Side: </text>
+      <text id="" x="45%" y="60%" class="info" fill="fb-aqua">Left</text>
 
     </use> 
 
+    <!-- 2nd screen -->
+    <use id="src2" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="gray" />
+      <!-- todo title -->
+      <use id="" class="list" href="#scrollview">   
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem1" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem2" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem3" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem4" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem5" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem6" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem7" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem8" href="#feed_log_item" />
+        </use>
+
+      </use>
+    </use>
+
+
+    <use id="pagination-dots" href="#pagination-widget" y="95%">
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-highlight-dot" />
+    </use>
 
   </use>
 

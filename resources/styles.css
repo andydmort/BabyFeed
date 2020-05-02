@@ -1,5 +1,5 @@
-.defaultText {
-  font-size: 32;
+.info {
+  font-size: 28;
   font-family: System-Regular;
   font-weight: regular;
   text-length: 32;
@@ -9,4 +9,27 @@
   width: 100%;
   height: 100%;
   fill: white;
+}
+
+.line_text {
+  font-size: 20;
+}
+
+.second_row {
+  y: 25;
+}
+
+.first_row {
+  y: 0;
+}
+
+.list_item{
+  height: 60;
+}
+
+.list{
+  x: 0;
+  y: 50;
+  width: 100%;
+  height: 80%;
 }
