@@ -1,3 +1,41 @@
 <svg>
-  <rect id="background" />
+
+  <use id="panorama-view" href="#panoramaview-item">
+    <!-- 1st screen -->
+    <use id="src1" href="#panoramaview-item">
+
+      <!-- button upper right -->
+      <use id="btn-tr" href="#combo-button-upper-right">
+        <set href="combo-button-icon" attributeName="href" to="baby_bottle_btn.png"/>  
+        <set href="combo-button-icon-press" attributeName="href" to="baby_bottle_selected_btn.png"/>
+        <!-- <set href="combo-button-stroke" attributeName="display" to="inline"/> -->
+      </use>
+      <!-- button upper left -->
+      <use id="btn-tr" href="#combo-button-upper-left">
+        <set href="combo-button-icon" attributeName="href" to="baby_bottle_btn.png"/>  
+        <set href="combo-button-icon-press" attributeName="href" to="baby_bottle_selected_btn.png"/>
+        <!-- <set href="combo-button-stroke" attributeName="display" to="inline"/> -->
+      </use>
+      <!-- button bottom left "stop" -->
+      <use id="btn-tr" href="#combo-button-lower-left">
+        <set href="combo-button-icon" attributeName="href" to="stop_60.png"/>  
+        <set href="combo-button-icon-press" attributeName="href" to="stop_selected_60.png"/>
+        <!-- <set href="combo-button-stroke" attributeName="display" to="inline"/> -->
+      </use>
+
+      <!-- text -->
+      <text id="" y="30%" class="" fill="fb-aqua">Current Side:</text>
+      <text id="" x="63%" y="30%" class="" fill="fb-aqua">Left</text>
+
+      <text id="" y="50%" class="" fill="fb-aqua">Last Feed:</text>
+      <text x="50%" y="50%" fill="fb-aqua">5h 30m ago</text>
+
+      <text id="" y="60%" fill="fb-aqua">Last Side: </text>
+      <text id="" x="50%" y="60%" fill="fb-aqua">Left</text>
+
+    </use> 
+
+
+  </use>
+
 </svg>
