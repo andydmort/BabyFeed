@@ -29,27 +29,27 @@
         <!-- <set href="combo-button-stroke" attributeName="display" to="inline"/> -->
       </use>
       <!-- button upper left -->
-      <use id="btn-tr" href="#combo-button-upper-left">
+      <use id="btn-tl" href="#combo-button-upper-left">
         <set href="combo-button-icon" attributeName="href" to="baby_bottle_btn.png"/>  
         <set href="combo-button-icon-press" attributeName="href" to="baby_bottle_selected_btn.png"/>
         <!-- <set href="combo-button-stroke" attributeName="display" to="inline"/> -->
       </use>
       <!-- button bottom left "stop" -->
-      <use id="btn-tr" href="#combo-button-lower-left">
+      <use id="btn-bl" href="#combo-button-lower-left">
         <set href="combo-button-icon" attributeName="href" to="stop_60.png"/>  
         <set href="combo-button-icon-press" attributeName="href" to="stop_selected_60.png"/>
         <!-- <set href="combo-button-stroke" attributeName="display" to="inline"/> -->
       </use>
 
       <!-- text -->
-      <text id="" y="30%" class="info" fill="fb-aqua">Current Side:</text>
-      <text id="" x="63%" y="30%" class="info" fill="fb-aqua">Left</text>
+      <text id="current_side_label" y="30%" class="info" fill="fb-aqua">Current Side:</text>
+      <text id="current_side_text" x="63%" y="30%" class="info" fill="fb-aqua">Left</text>
 
       <text id="" y="50%" class="info" fill="fb-aqua">Last Feed:</text>
-      <text x="45%" y="50%" class="info" fill="fb-aqua">5h 30m ago</text>
+      <text id="last_feed_text" x="45%" y="50%" class="info" fill="fb-aqua">5h 30m ago</text>
 
-      <text id="" y="60%" class="info" fill="fb-aqua">Last Side: </text>
-      <text id="" x="45%" y="60%" class="info" fill="fb-aqua">Left</text>
+      <text id="" y="60%" class="info" fill="fb-aqua">Last Starting Side: </text>
+      <text id="last_side_text" x="77%" y="60%" class="info" fill="fb-aqua">Left</text>
 
     </use> 
 
@@ -79,15 +79,15 @@
           <use id="listItem5" href="#feed_log_item" />
         </use>
 
-        <use href="#scrollview-item" class="list_item">
+        <use href="#scrollview-item" class="list_item hidden">
           <use id="listItem6" href="#feed_log_item" />
         </use>
 
-        <use href="#scrollview-item" class="list_item">
+        <use href="#scrollview-item" class="list_item hidden">
           <use id="listItem7" href="#feed_log_item" />
         </use>
 
-        <use href="#scrollview-item" class="list_item">
+        <use href="#scrollview-item" class="list_item hidden">
           <use id="listItem8" href="#feed_log_item" />
         </use>
 
