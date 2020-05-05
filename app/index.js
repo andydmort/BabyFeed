@@ -1,6 +1,7 @@
 import document from "document";
 import clock from "clock";
 import * as scr1 from "./scr1";
+import * as src2 from "./scr2";
 
 clock.granularity = "minutes";
 
@@ -15,6 +16,7 @@ clock.ontick = (evt) => {
 }
 
 scr1.init();
+src2.init();
 
 
 

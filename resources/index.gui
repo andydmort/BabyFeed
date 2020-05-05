@@ -3,17 +3,17 @@
   <defs>
     <symbol id="feed_log_item">
       <text class="line_text first_row">Time:</text>
-      <text x="17%" class="line_text first_row">00:00 pm</text>
+      <text id="feed_time" x="17%" class="line_text first_row">00:00 pm</text>
 
-      <text x="50%" class="line_text first_row">Last Side:</text>
-      <text x="82%" class="line_text first_row">Left</text>
+      <text x="50%" class="line_text first_row">Start Side:</text>
+      <text id="feed_side" x="82%" class="line_text first_row">Left</text>
 
 
       <text class="line_text second_row">L:</text>
-      <text x="7%" class="line_text second_row">0h 00min</text>
+      <text id="left_time" x="7%" class="line_text second_row">0h 00min</text>
 
       <text x="50%" class="line_text second_row">R:</text>
-      <text x="57%" class="line_text second_row">0h 00min</text>
+      <text id="right_time" x="57%" class="line_text second_row">0h 00min</text>
       <rect x="0" y="30" width="100%" height="1" fill="black"/>
     </symbol>
   </defs>
@@ -59,38 +59,70 @@
       <!-- todo title -->
       <use id="" class="list" href="#scrollview">   
 
-        <use href="#scrollview-item" class="list_item">
-          <use id="listItem1" href="#feed_log_item" />
+        <use href="#scrollview-item" class="list_item ">
+          <use id="listItem0" href="#feed_log_item" />
         </use>
 
         <use href="#scrollview-item" class="list_item">
-          <use id="listItem2" href="#feed_log_item" />
+          <use id="listItem1" class="hidden" href="#feed_log_item" />
+        </use>
+
+        <use href="#scrollview-item" class="list_item ">
+          <use id="listItem2" class= "hidden" href="#feed_log_item" />
         </use>
 
         <use href="#scrollview-item" class="list_item">
-          <use id="listItem3" href="#feed_log_item" />
+          <use id="listItem3" class="hidden" href="#feed_log_item" />
         </use>
 
         <use href="#scrollview-item" class="list_item">
-          <use id="listItem4" href="#feed_log_item" />
+          <use id="listItem4" class="hidden" href="#feed_log_item" />
         </use>
 
         <use href="#scrollview-item" class="list_item">
-          <use id="listItem5" href="#feed_log_item" />
+          <use id="listItem5" class="hidden" href="#feed_log_item" />
         </use>
 
-        <use href="#scrollview-item" class="list_item hidden">
-          <use id="listItem6" href="#feed_log_item" />
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem6" class="hidden" href="#feed_log_item" />
         </use>
 
-        <use href="#scrollview-item" class="list_item hidden">
-          <use id="listItem7" href="#feed_log_item" />
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem7" class="hidden" href="#feed_log_item" />
         </use>
 
-        <use href="#scrollview-item" class="list_item hidden">
-          <use id="listItem8" href="#feed_log_item" />
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem8" class="hidden" href="#feed_log_item" />
         </use>
 
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem9" class="hidden" href="#feed_log_item" />
+        </use>
+        
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem10" class="hidden" href="#feed_log_item" />
+        </use>
+        
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem11" class="hidden" href="#feed_log_item" />
+        </use>
+        
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem12" class="hidden" href="#feed_log_item" />
+        </use>
+        
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem13" class="hidden" href="#feed_log_item" />
+        </use>
+        
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem14" class="hidden" href="#feed_log_item" />
+        </use>
+        
+        <use href="#scrollview-item" class="list_item">
+          <use id="listItem15" class="hidden" href="#feed_log_item" />
+        </use>
+        
       </use>
     </use>
 

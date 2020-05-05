@@ -1,5 +1,7 @@
 import document from "document";
 import * as fs from "fs";
+import * as common from "./common";
+import * as scr2 from "./scr2";
 
 let current_side_text = document.getElementById("#current_side_text");
 let current_side_label = document.getElementById("#current_side_label");
@@ -31,39 +33,20 @@ let enum_PmAm = {
 let running = false;
 
 
-function show(doc_el, show) {
-    if (show) {
-        doc_el.class = doc_el.class.replace(" hidden", "");
-    }
-    else {
-        console.log(`class: ${doc_el.class}`);
-        if(doc_el.class.indexOf("hidden") == -1)
-            doc_el.class += " hidden";
-        console.log(`class: ${doc_el.class}`);
-    }
-}
 function show_running(to_show) {
-    show(current_side_label, to_show);
-    show(current_side_text, to_show);
-    show(btn_stop, to_show);
+    common.show(current_side_label, to_show);
+    common.show(current_side_text, to_show);
+    common.show(btn_stop, to_show);
 }
-function get_last_side_text(start_time_in_milliseconds) {
+
+function get_last_feed_text(start_time_in_milliseconds) {
     if (!curr_time)
         curr_time = new Date();
     let start_tim = new Date(start_time_in_milliseconds);
-    // console.log(`curr_time: ${curr_time.toISOString()}`);
-    // console.log(`start_time: ${start_time_in_milliseconds}`);
-    // console.log(`new Date${(new Date(start_time_in_milliseconds))}`);
-    let min_delta = curr_time.getMinutes() - start_tim.getMinutes();
-    let hour_delta;
-    if (min_delta < 0) {
-        hour_delta = curr_time.getHours() - start_tim.getHours() - 1;
-        min_delta += 60;
-    }
-    else
-        hour_delta = curr_time.getHours() - start_tim.getHours();
 
-    return `${hour_delta}hr ${min_delta}m ago`;
+    let time_delta = curr_time.getTime() - start_tim.getTime();
+
+    return common.get_hrs_mins_from_ms(time_delta);
 }
 
 // Note: Curr_state must be update before calling this function
@@ -83,7 +66,7 @@ function udpate_ui(in_data) {
 
     current_side_text.text = in_data.curr_side;
     last_side_text.text = in_data.start_side;
-    last_feed_text.text = get_last_side_text(in_data.start_time);
+    last_feed_text.text = get_last_feed_text(in_data.start_time);
 
 }
 
@@ -103,10 +86,6 @@ export function init() {
         data = JSON.parse(data_str);
         // Set state
         curr_state = data.curr_state;
-        //   current_side_text.text = data.curr_side;
-        //   last_side_text.text = data.start_side; 
-        //   console.log(`data.start_time: ${data.start_time}`);
-        //   last_feed_text.text = get_last_side_text(data.start_time);
         //update_ui
         udpate_ui(data);
         //Set display
@@ -120,8 +99,8 @@ export function init() {
         // Set ui
         last_feed_text.text = `0hr 0m ago`;
         last_side_text.text = "";
-        show(current_side_label, false);
-        show(current_side_text, false);
+        common.show(current_side_label, false);
+        common.show(current_side_text, false);
     }
 
 
@@ -220,7 +199,7 @@ btn_stop.onactivate = function (evt) {
             curr_state: enum_state.not_running
         }
         fs.writeFileSync(data_file_name, JSON.stringify(data), "utf-8");
-        // TODO: Save to list
+        scr2.add_data(data);
     }
     else if (curr_state == enum_state.left) {
         data = {
@@ -233,7 +212,7 @@ btn_stop.onactivate = function (evt) {
             curr_state: enum_state.not_running
         }
         fs.writeFileSync(data_file_name, JSON.stringify(data), "utf-8");
-        // TODO: Save to list
+        scr2.add_data(data);
     }
     else {
         // do nothing
