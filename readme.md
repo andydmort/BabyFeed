@@ -23,4 +23,4 @@ Start by pressing the bottle in the upper left or upper right corner (depending 
 
 <a target="_blank" href="https://icons8.com/icons/set/stop">Stop icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
-- Also thanks to tanstaaflFH who had a similar project to this one. [GITHUB](https://github.com/tanstaaflFH/BabyLog)
+- Also thanks to tanstaaflFH who had a similar project to this one. [BabyLog](https://github.com/tanstaaflFH/BabyLog)
