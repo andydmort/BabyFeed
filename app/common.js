@@ -1,7 +1,7 @@
 export function show(doc_el, show) {
     if (show) {
         console.log(`Showing Element ${doc_el.id}`);
-        doc_el.class = doc_el.class.replace(" hidden", "");
+        // doc_el.class = doc_el.class.replace(" hidden", "");
         doc_el.class = doc_el.class.replace("hidden", "");
     }
     else {

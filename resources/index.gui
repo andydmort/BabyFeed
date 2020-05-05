@@ -2,19 +2,22 @@
 
   <defs>
     <symbol id="feed_log_item">
-      <text class="line_text first_row">Time:</text>
-      <text id="feed_time" x="17%" class="line_text first_row">00:00 pm</text>
+      <text class="line_text first_row">Date:</text>
+      <text x="17%" id="feed_date" class="line_text first_row">00/00</text>
 
-      <text x="50%" class="line_text first_row">Start Side:</text>
-      <text id="feed_side" x="82%" class="line_text first_row">Left</text>
+      <text x="50%" class="line_text first_row">Time:</text>
+      <text x="70%" id="feed_time" class="line_text first_row">00:00 pm</text>
+
+      <text x="0%" class="line_text second_row">Start Side:</text>
+      <text id="feed_side" x="32%" class="line_text second_row">Right</text>
 
 
-      <text class="line_text second_row">L:</text>
-      <text id="left_time" x="7%" class="line_text second_row">0h 00min</text>
+      <text class="line_text third_row">L:</text>
+      <text id="left_time" x="7%" class="line_text third_row">0h 00min</text>
 
-      <text x="50%" class="line_text second_row">R:</text>
-      <text id="right_time" x="57%" class="line_text second_row">0h 00min</text>
-      <rect x="0" y="30" width="100%" height="1" fill="black"/>
+      <text x="50%" class="line_text third_row">R:</text>
+      <text id="right_time" x="57%" class="line_text third_row">0h 00min</text>
+      <rect x="0" y="60" width="100%" height="1" fill="fb-aqua"/>
     </symbol>
   </defs>
 
@@ -55,7 +58,7 @@
 
     <!-- 2nd screen -->
     <use id="src2" href="#panoramaview-item">
-      <rect width="100%" height="100%" fill="gray" />
+      <rect width="100%" height="100%" fill="black" />
       <!-- todo title -->
       <use id="" class="list" href="#scrollview">   
 

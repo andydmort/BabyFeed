@@ -13,8 +13,12 @@
 
 .line_text {
   font-size: 20;
+  fill: fb-aqua;
 }
 
+.third_row{
+  y: 50;
+}
 .second_row {
   y: 25;
 }
@@ -24,7 +28,7 @@
 }
 
 .list_item{
-  height: 60;
+  height: 85;
 }
 
 .hidden{

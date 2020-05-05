@@ -11,6 +11,9 @@ let data = undefined;
 
 export function init() {
 
+    // Delete option for testing
+    // fs.unlinkSync(data_file_name);
+
     // Gather all the list items
     for (let i = 0; i < num_list_items; i++) {
         console.log(`#listItem${i}`);
@@ -41,6 +44,10 @@ function update_ui(data){
         let feed_time = list_items[i].getElementById("feed_time");
         let f_time = new Date(data[i].start_time);
         feed_time.text = `${f_time.getHours()+1}:${f_time.getMinutes()+1}`;
+        let day = f_time.getDate();
+        let month = f_time.getMonth() + 1;
+        let feed_date = list_items[i].getElementById("feed_date");
+        feed_date.text = `${month}/${day}`;
 
         let start_side = list_items[i].getElementById("feed_side");
         start_side.text = data[i].start_side;
