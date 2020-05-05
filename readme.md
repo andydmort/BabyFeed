@@ -6,6 +6,11 @@ A Breast Feeding logging app to help new moms with breast feeding. The app will 
 
 Start by pressing the bottle in the upper left or upper right corner (depending on what side is being started on). Then evey time a side is switched press the button in the other top corner. Once finished press the stop button in the lower left corner. 
 
+![Img1](screenshots/Start_screen.png)
+![Img2](screenshots/left.png)
+![Img3](screenshots/right.png)
+![Img4](screenshots/feeding_list.png)
+
 ### Thanks
 - Special thanks to icons8.com for the Baby Bottle Icons and the stop icon. 
 
