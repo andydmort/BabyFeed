@@ -75,7 +75,7 @@ export function add_data(data_) {
     
     data.unshift(data_);
 
-    if(data.length > 25) data = data.slice(0,25);
+    if(data.length > num_list_items) data = data.slice(0,num_list_items);
 
     fs.writeFileSync(data_file_name, JSON.stringify(data), "utf-8");
 
